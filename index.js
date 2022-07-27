@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-const Person = require('./models/Patient')
 
 app.use(
   express.urlencoded({
@@ -13,6 +12,8 @@ app.use(
 app.use(express.json());
 
 //Rotas da API
+const patientRoutes = require('./routes/patientRoutes')
+app.use('/patient', patientRoutes)
 
 
 // rota inicial / endpoint
