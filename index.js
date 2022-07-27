@@ -1,5 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
+
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
 const app = express();
 
 
@@ -10,6 +14,9 @@ app.use(
 );
 
 app.use(express.json());
+
+// rota swagger
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
 //Rotas da API
 const patientRoutes = require('./routes/patientRoutes')

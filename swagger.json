@@ -1,0 +1,23 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+         "title": "Patients",
+         "description": "Documentation from products api",
+         "version": "1.0.0"
+    },
+    "basePath": "/",
+    "paths": {
+        "/patient/find": {
+            "get": {
+                "parameters":{
+                    "in": "query",
+                    "patient": "patient",
+                    "type": "string"
+                },
+                "response": {
+                    
+                }
+            }
+        }
+    }
+}
